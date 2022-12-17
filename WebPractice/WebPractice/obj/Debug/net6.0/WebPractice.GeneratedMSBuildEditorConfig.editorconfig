@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\toki-\source\repos\WebPractice\WebPractice
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/toki-/source/repos/WebPractice/WebPractice/Views/Data/Send.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0YVxTZW5kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/toki-/source/repos/WebPractice/WebPractice/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,8 +40,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFzdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/toki-/source/repos/WebPractice/WebPractice/Views/Tast/Miso.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFzdFxNaXNvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/toki-/source/repos/WebPractice/WebPractice/Views/Tast/Others.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFzdFxPdGhlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/toki-/source/repos/WebPractice/WebPractice/Views/Tast/Pigbones.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFzdFxQaWdib25lcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/toki-/source/repos/WebPractice/WebPractice/Views/Tast/solt.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFzdFxzb2x0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/toki-/source/repos/WebPractice/WebPractice/Views/Tast/SoySorce.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFzdFxTb3lTb3JjZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/toki-/source/repos/WebPractice/WebPractice/Views/_ViewImports.cshtml]
