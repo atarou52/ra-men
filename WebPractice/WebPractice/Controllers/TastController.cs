@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebPractice.DataSorce;
+using WebPractice.Models;
 
 namespace WebPractice.Controllers
 {
@@ -19,7 +21,8 @@ namespace WebPractice.Controllers
         }
         public IActionResult Pigbones()
         {
-            return View();
+            var tasts = DataSorce.DataSorce.Index();
+            return View(tasts);
         }
         public IActionResult SoySorce()
         {
