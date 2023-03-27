@@ -12,24 +12,33 @@ namespace WebPractice.Controllers
         }
         public IActionResult Solt()
         {
-            return View();
+            var tasts = DataSorce.DataSorce.Index("Solt");
+            return View(tasts);
         }
 
         public IActionResult Miso() 
         {
-            return View();
+            var tasts = DataSorce.DataSorce.Index("Miso");
+            return View(tasts);
         }
         public IActionResult Pigbones()
         {
-            var tasts = DataSorce.DataSorce.Index();
+            var tasts = DataSorce.DataSorce.Index("Pigbones");
             return View(tasts);
         }
         public IActionResult SoySorce()
         {
-            return View();
+            var tasts = DataSorce.DataSorce.Index("SoySorce");
+            return View(tasts);
         }
 
         public IActionResult Others()
+        {
+            var tasts = DataSorce.DataSorce.Index("all");
+            return View(tasts);
+        }
+
+        public IActionResult Register()
         {
             return View();
         }

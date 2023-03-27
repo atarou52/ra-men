@@ -1,18 +1,41 @@
-﻿@*
+﻿@model WebPractice.Models.list
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
     Layout = null;
 }
-
-<html>
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>ラーメン</title>
+    </head>
     <body>
-        <h2>その他</h2>
+        <h2>ラーメン</h2>
         <hr />
-        <div>
-            <h3>らーめんっていっぱい種類があるよね</h3>
-        </div>
     </body>
-</html>
+    </html>
+    <th>
+        <table border="1">
+            <tr>
+                <th>店の名前</th>
+                <th>味の種類</th>
+                <th>コメント</th>
+                <th>点数</th>
+            </tr>
+        @if(Model.TastTexts is not null)
+        {
+            @foreach (var item in Model.TastTexts)
+            {
+                    <tr>
+                        <td>@Html.DisplayFor( m => item.Name)</td>
+                        <td>@Html.DisplayFor( m => item.Tast)</td>
+                        <td>@Html.DisplayFor( m => item.Note)</td>
+                        <td>@Html.DisplayFor( m => item.Score)</td>
+                    </tr>
+            }
+        }
+        </table>
+    </th>
 
 <a href="/Home/Index/3">戻る</a>

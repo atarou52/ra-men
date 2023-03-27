@@ -1,4 +1,4 @@
-﻿@model WebPractice.Models.TastModel.TastText
+﻿@model WebPractice.Models.list
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
@@ -13,20 +13,6 @@
     <body>
         <h2>豚骨ラーメン</h2>
         <hr />
-        <div>
-            @using (Html.BeginForm(
-                "Send",
-                "Data",
-                new { id = "H15A1", charset = "utf8"},
-                FormMethod.Post,
-                true,
-                new { enctype = "multipart/form-data" }
-            ))
-            {
-                @Html.TextBox("value1", "", new { maxlength = 20 })
-                 <input type="submit" value="送信" />
-            }
-        </div>
     </body>
     </html>
     <th>
@@ -37,12 +23,18 @@
                 <th>コメント</th>
                 <th>点数</th>
             </tr>
-            <tr>
-                <td>@Model.Name</td>
-                <td>@Model.Tast</td>
-                <td>@Model.Note</td>
-                <td>@Model.Score</td>
-            </tr>
+        @if(Model.TastTexts is not null)
+        {
+            @foreach (var item in Model.TastTexts)
+            {
+                    <tr>
+                        <td>@Html.DisplayFor( m => item.Name)</td>
+                        <td>@Html.DisplayFor( m => item.Tast)</td>
+                        <td>@Html.DisplayFor( m => item.Note)</td>
+                        <td>@Html.DisplayFor( m => item.Score)</td>
+                    </tr>
+            }
+        }
         </table>
     </th>
 

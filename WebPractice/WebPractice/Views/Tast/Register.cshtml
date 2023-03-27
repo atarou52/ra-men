@@ -1,0 +1,24 @@
+﻿@model TastModel.TastText
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    Layout = null;
+}
+
+<h2>ラーメン情報登録</h2>
+
+<form method="post">
+    <label>ラーメン名:</label><input type="text" name="RamenName" />
+    <br />
+    <label>味:</label><input type="text" name="Tast" />
+    <br />
+    <label>コメント:</label><input type="text" name="Note" />
+    <br />
+    <label>スコア:</label><input type="text" name="Score" />
+    <br />
+    <input type="submit" value="登録" />
+</form>
+
+<a href="/Home/Index/3">戻る</a>

@@ -9,7 +9,7 @@ namespace WebPractice.DataSorce
 {
     public class DataSorce
     {
-        public static Models.TastModel.TastText Index()
+        public static Models.list Index(string Kinds)
         {
             // 接続文字列
             var connectionString =
@@ -17,7 +17,27 @@ namespace WebPractice.DataSorce
 
             // 実行するSQL
             StringBuilder sql = new StringBuilder();
-            sql.Append("SELECT * FROM noodle ");
+            sql.AppendLine("SELECT * FROM noodle ");
+
+            switch (Kinds)
+            {
+                case "Pigbones":
+                    sql.AppendLine("WHERE tast LIKE '%豚骨%' ");
+                    break;
+
+                case "Miso":
+                    sql.AppendLine("WHERE tast LIKE '%味噌%' ");
+                    break;
+
+                case "Solt":
+                    sql.AppendLine("WHERE tast LIKE '%塩%' ");
+                    break;
+
+                case "SoySorce":
+                    sql.AppendLine("WHERE tast LIKE '%醤油%' ");
+                    break;
+
+            }
 
             // 接続・SQL実行に必要なインスタンスを生成
             using (var connection = new MySqlConnection(connectionString))
@@ -25,6 +45,7 @@ namespace WebPractice.DataSorce
             {
                 // 接続開始
                 connection.Open();
+                var tastlist = new List<Models.TastModel.TastText>();
                 var tasts = new Models.TastModel.TastText();
                 command.CommandText = sql.ToString();
                 
@@ -40,9 +61,15 @@ namespace WebPractice.DataSorce
                             Note = reader["Note"].ToString(),
                             Score = int.Parse(reader["Score"].ToString()!)
                         };
+                        tastlist.Add(tasts);
                     }
                 }
-                return tasts;
+                var ViewModel = new Models.list
+                {
+                    TastTexts = tastlist
+                };
+
+                return ViewModel;
             }
         }
     }
